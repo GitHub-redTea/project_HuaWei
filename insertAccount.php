@@ -38,9 +38,9 @@
 	//5、把sql语句发送给dbms，执行得到结果
 	$is_ok = mysql_query($sql);
 	if($is_ok){
-		echo true;
+		echo 'echo';
 	}else{
-		echo false;
+		echo 'false';
 	}
 
  ?>
