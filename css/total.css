@@ -828,7 +828,10 @@ div.login_click {
   width: 358px;
   height: 340px;
   padding-left: 20px; }
-  div.login_click span {
+  div.login_click span.span1 {
+    position: absolute;
+    bottom: 130px; }
+  div.login_click span.click_close {
     top: 0;
     right: 0;
     cursor: pointer;

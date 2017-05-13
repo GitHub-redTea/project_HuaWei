@@ -8,11 +8,8 @@
 	/*echo '<pre>';
 	print_r($_POST);*/
 	//将提交上来的数据取出来
-	$stuId = $_POST['stuId'];
-	$stuName = $_POST['stuName'];
-	$stuMath = $_POST['stuMath'];
-	$stuEnglish = $_POST['stuEnglish'];
-	$stuChinese = $_POST['stuChinese'];
+	$uesrname = $_POST['uesrname'];
+	$password = $_POST['password'];
 	//print_r($stuName);
 
 	//2、链接数据库(mysql)
@@ -33,17 +30,17 @@
 	}
 
 	//3、选择数据库
-	mysql_select_db('qd1701_db');
+	mysql_select_db('accounthtml');
 
 	//开始插入数据
 	//4、通过sql语句进行插入数据
-	$sql = "INSERT INTO student VALUES($stuId,'$stuName',$stuChinese,$stuEnglish,$stuMath)";
+	$sql = "INSERT INTO account VALUES('$uesrname','$password')";
 	//5、把sql语句发送给dbms，执行得到结果
 	$is_ok = mysql_query($sql);
 	if($is_ok){
-		echo '恭喜你添加成功';
+		echo true;
 	}else{
-		echo '添加失败';
+		echo false;
 	}
 
  ?>

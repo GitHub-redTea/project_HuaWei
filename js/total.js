@@ -392,6 +392,53 @@ $(function() {
 		$(".login_click").css("display", "none");
 	})
 	
+	/*点击输入账号*/
+	
+	$(".register_input").click(function(){
+		//console.log($(".register1").val(), $(".register2").val());
+		$.ajax({
+			
+			url:"insertAccount.php",
+			type: "POST",
+			data: {uesrname: $(".register1").val(), password: $(".register2").val()},
+			success: function(data , textStatus, xhr){
+				//console.log(data);
+				console.log(data, textStatus, xhr)
+				console.log(typeof data);
+				if(data){
+					//$("#register_click").find("#span1").html("注册成功");
+					$(".span1").eq(1).html("注册成功");
+				}
+			}
+		});
+	})
+	
+	//登陆状态
+	$(".login_input").click(function(){
+		console.log($(".register1").val(), $(".register2").val());
+		$.ajax({
+			url:"showAccount.php",
+			type: "POST",
+			data: {uesrname: $(".login1").val(), password: $(".login2").val()},
+			success: function(data){
+				/*if(data =="success1"){
+					//$("#register_click").find("#span1").html("注册成功");
+					$(".span1").eq(0).html("登陆成功");
+				}*/
+				
+				console.log(typeof data);
+				if(data){
+					$(".span1").eq(0).html("登陆成功");
+				}
+			}
+		});
+	})
+	
+	
+	
+	
+	
+	
 })
 $.fn.extend({
 	animate_buffer : function(json, func){
