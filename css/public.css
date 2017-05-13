@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+body,ol,ul,h1,h2,h3,h4,h5,h6,p,th,td,dl,dd,form,fieldset,legend,figure,input,textarea,select{margin:0;padding:0;}
+body{word-wrap:break-word;font:12px  "宋体";}
+fieldset,a img,.bor0{border:0;}
+li{list-style:none;}
+a,u,s,del{color:#666;text-decoration:none;} 
+i,em,b{font-style:normal;font-weight:100;}
+a img{border:0;}
+img{vertical-align:middle;}
+table{border-collapse:collapse;}
+input,textarea{outline:none;}/*去除谷歌点击蓝色虚框*/
+textarea{resize:none;}/*禁止多行文本输入框的拖动*/
+
+.ind2{text-indent:2em;} 
+.l{float:left;}
+.r{float:right;}
+.rel{position:relative;}
+.abs{position:absolute;}
+.over{text-overflow:ellipsis;overflow:hidden;white-space:nowrap;}
+.vcenter:after{content:"";display:inline-block;vertical-align:middle;height:100%;width:0;}
+.clear{zoom:1;}
+.clear:after{content:"";display:block;clear:both;}
+.cu{cursor:pointer;}
+
+.an02{transition:.2s all;}
+.an03{transition:.3s all;}
+.an04{transition:.4s all;}
+.an05{transition:.5s all;}
+.an1{transition:1s all;}
+
+.ys05{transition-delay:.5s;}
+.ys1{transition-delay:1s;}
+.ys15{transition-delay:1.5s;}
+.ys2{transition-delay:2s;}
+
+.kaoshi{justify-content:space-between;}
+.kaoshi{justify-content:space-around;}
+.kaoshi{ box-sizing:border-box;}
+
+
+
+@keyframes chil{
+	0%{transform:rotate(15deg);}
+	100%{transform:rotate(-30deg);}
+}
+@keyframes chir{
+	0%{transform:rotate(-15deg);}
+	100%{transform:rotate(30deg);}
+}
+{animation:chir .5s linear alternate infinite;}
